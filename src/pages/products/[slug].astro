@@ -1,136 +1,79 @@
 ---
 import products from "../../data/products";
+import "../../styles/main.css";
 
 const { slug } = Astro.params;
 const product = products.find(p => p.slug === slug);
 
 if (!product) {
-  throw new Error(`Product not found: ${slug}`);
+  throw new Error("Product not found");
 }
+
+const BASE = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{product.name}</title>
-
-    <!-- 🔑 КЛЮЧЕВОЙ ФИКС -->
-    <base href={import.meta.env.BASE_URL} />
-
-    <style>
-      body {
-        margin: 0;
-        padding: 16px;
-        font-family: system-ui, sans-serif;
-        background: #f6f6f6;
-        color: #111;
-      }
-
-      a.back {
-        display: inline-block;
-        margin-bottom: 12px;
-        text-decoration: none;
-        color: #444;
-        font-size: 14px;
-      }
-
-      .card {
-        background: #fff;
-        border-radius: 12px;
-        padding: 16px;
-        box-shadow: 0 4px 16px rgba(0,0,0,.08);
-      }
-
-      .header {
-        display: flex;
-        gap: 16px;
-      }
-
-      .image {
-        width: 120px;
-        flex-shrink: 0;
-      }
-
-      .image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        display: block;
-      }
-
-      h1 {
-        margin: 0 0 6px;
-        font-size: 22px;
-      }
-
-      .meta {
-        font-size: 14px;
-        color: #666;
-      }
-
-      .section {
-        margin-top: 20px;
-      }
-
-      .section h2 {
-        margin: 0 0 8px;
-        font-size: 16px;
-      }
-
-      .section ul {
-        margin: 0;
-        padding-left: 18px;
-      }
-
-      .section p {
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.5;
-      }
-    </style>
   </head>
 
   <body>
-    <!-- ← BACK РАБОТАЕТ -->
-    <a class="back" href="./">← Powrót</a>
+    <!-- ⬅️ BACK -->
+    <a class="back" href={BASE}>← Powrót</a>
 
     <div class="card">
-      <div class="header">
-        <div class="image">
-          <!-- 🖼 КАРТИНКА РАБОТАЕТ -->
-          <img
-            src={product.image}
-            alt={product.name}
-            loading="lazy"
-          />
-        </div>
-
-        <div>
-          <h1>{product.name}</h1>
-          <div class="meta">
-            {product.category} · {product.country} · {product.abv}%
-            {product.age ? ` · ${product.age} lat` : ""}
-          </div>
-        </div>
+      <div class="image">
+        <img
+          src={`${BASE}${product.image}`}
+          alt={product.name}
+        />
       </div>
 
-      {product.when && (
-        <div class="section">
-          <h2>Jeśli klient pyta o:</h2>
-          <ul>
-            {product.when.map(item => <li>{item}</li>)}
-          </ul>
-        </div>
-      )}
+      <div class="content">
+        <h1>{product.name}</h1>
+        <p class="subtitle">{product.subtitle}</p>
 
-      {product.note && (
-        <div class="section">
-          <h2>Co warto wiedzieć</h2>
-          <p>{product.note}</p>
-        </div>
-      )}
+        <ul>
+          <li><strong>Kategoria:</strong> {product.category}</li>
+          <li><strong>Kraj:</strong> {product.country}</li>
+          <li><strong>ABV:</strong> {product.abv}</li>
+        </ul>
+
+        {product.whenToOffer && (
+          <>
+            <h2>When to offer</h2>
+            <ul>
+              {product.whenToOffer.map(item => <li>{item}</li>)}
+            </ul>
+          </>
+        )}
+
+        {product.howToPresent && (
+          <>
+            <h2>Co warto wiedzieć</h2>
+            <p>{product.howToPresent}</p>
+          </>
+        )}
+
+        {product.alternatives && (
+          <>
+            <h2>Alternatywy</h2>
+            <ul>
+              {product.alternatives.map(a => <li>{a}</li>)}
+            </ul>
+          </>
+        )}
+
+        {product.nose && (
+          <>
+            <h2>W zapachu</h2>
+            <p>{product.nose}</p>
+          </>
+        )}
+      </div>
     </div>
   </body>
 </html>
