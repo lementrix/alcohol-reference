@@ -61,7 +61,7 @@ const { product } = Astro.props;
 
       {product.whenToOffer && (
         <section>
-          <h2>When to offer</h2>
+          <h2>Dla kogo</h2>
           <ul>
             {product.whenToOffer.map((item) => (
               <li>{item}</li>
@@ -72,14 +72,14 @@ const { product } = Astro.props;
 
       {product.howToPresent && (
         <section>
-          <h2>How to present</h2>
+          <h2>Jak prezentować</h2>
           <p>{product.howToPresent}</p>
         </section>
       )}
 
       {product.alternatives && (
         <section>
-          <h2>Alternatives</h2>
+          <h2>Słuzy alternatywą do</h2>
           <ul>
             {product.alternatives.map((alt) => (
               <li>{alt}</li>
