@@ -85,4 +85,21 @@ h1 {
   #results a {
     padding: 12px 14px;
   }
+/* PRODUCT IMAGE FIX (mobile) */
+.product-image,
+.card img,
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .product-image,
+  .card img {
+    max-height: 320px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+}
 }
