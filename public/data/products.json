@@ -7,7 +7,7 @@
     "country": "Scotland",
     "region": "Speyside",
     "abv": "40%",
-    "image": "/bottle_img/glenfiddich-vat01.webp",
+    "image": "bottle_img/glenfiddich-vat01.webp",
 
     "whenToOffer": [
       "Klient szuka Glenfiddich 12",
@@ -37,7 +37,7 @@
     "category": "brandy",
     "country": "France",
     "abv": "40%",
-    "image": "/bottle_img/james-hennessy.png",
+    "image": "bottle_img/james-hennessy.png",
     "maturation": "7-20 lat w uzywanych beczkach z francuskiego dębu",
 
     "whenToOffer": [
@@ -66,7 +66,7 @@
     "category": "vodka",
     "country": "Poland",
     "abv": "42,7%",
-    "image": "/bottle_img/vintage_young_potato.png",
+    "image": "bottle_img/vintage_young_potato.png",
     "maturation": "5 lat w nowych dębowych beczkach",
     
 
@@ -96,7 +96,7 @@
     "category": "vodka",
     "country": "Poland",
     "abv": "35%",
-    "image": "/bottle_img/chopin-etiuda.webp",
+    "image": "bottle_img/chopin-etiuda.webp",
 
     "whenToOffer": [
       "Klient szuka wiśniowki do drinków",
@@ -124,7 +124,7 @@
     "category": "nalewka",
     "country": "Poland",
     "abv": "30%",
-    "image": "/bottle_img/longinus-wisniowka.webp",
+    "image": "bottle_img/longinus-wisniowka.webp",
 
     "whenToOffer": [
       "Klient szuka prawdziwej nalewki, nie likieru",
@@ -152,7 +152,7 @@
     "category": "okowita",
     "country": "Poland",
     "abv": "37.5%",
-    "image": "/bottle_img/sliwowica-polska.webp",
+    "image": "bottle_img/sliwowica-polska.webp",
 
     "whenToOffer": [
       "Klient interesuje się mocnymi alkoholami",
@@ -180,7 +180,7 @@
     "category": "Likier",
     "country": "Poland",
     "abv": "32%",
-    "image": "/bottle_img/piernikowy-trunek.webp",
+    "image": "bottle_img/piernikowy-trunek.webp",
 
     "whenToOffer": [
       "Klient szuka lokalnego produktu",
@@ -208,7 +208,7 @@
     "category": "Likier",
     "country": "Poland",
     "abv": "32%",
-    "image": "/bottle_img/sublimat-winny.png",
+    "image": "bottle_img/sublimat-winny.png",
 
     "whenToOffer": [
       "Klient pyta o regionalne, historyczne ciekawostki",
