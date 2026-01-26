@@ -1,3 +1,2 @@
-import products from "../../public/data/products.json";
-
-export { products };
+import data from "../../public/data/products.json";
+export default data;
