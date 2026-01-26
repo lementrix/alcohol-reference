@@ -2,78 +2,98 @@
 import products from "../../data/products";
 import "../../styles/main.css";
 
-const { slug } = Astro.params;
-const product = products.find(p => p.slug === slug);
-
-if (!product) {
-  throw new Error("Product not found");
+/**
+ * ОБЯЗАТЕЛЬНО для GitHub Pages
+ * Astro должен знать все slug заранее
+ */
+export async function getStaticPaths() {
+  return products.map((product) => ({
+    params: { slug: product.slug },
+    props: { product },
+  }));
 }
 
-const BASE = import.meta.env.BASE_URL;
+const { product } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{product.name}</title>
+
+    <!-- ВАЖНО для GitHub Pages -->
+    <base href={import.meta.env.BASE_URL} />
   </head>
 
   <body>
-    
-    <a class="back" href={BASE}>← Powrót</a>
+    <!-- ← BACK -->
+    <a class="back" href="./">← Powrót</a>
 
     <div class="card">
-      <div class="image">
-        <img
-          src={`${BASE}${product.image}`}
-          alt={product.name}
-        />
+      <div class="header">
+        <div class="image">
+          <img
+            src={product.image}
+            alt={product.name}
+            loading="lazy"
+          />
+        </div>
+
+        <div class="info">
+          <h1>{product.name}</h1>
+          <p class="subtitle">{product.subtitle}</p>
+
+          <ul class="meta">
+            <li><strong>Kategoria:</strong> {product.category}</li>
+            <li><strong>Kraj:</strong> {product.country}</li>
+            <li><strong>ABV:</strong> {product.abv}</li>
+
+            {product.maturation && (
+              <li>
+                <strong>Dojrzewanie:</strong> {product.maturation}
+              </li>
+            )}
+          </ul>
+        </div>
       </div>
 
-      <div class="content">
-        <h1>{product.name}</h1>
-        <p class="subtitle">{product.subtitle}</p>
+      {product.whenToOffer && (
+        <section>
+          <h2>When to offer</h2>
+          <ul>
+            {product.whenToOffer.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
-        <ul>
-          <li><strong>Kategoria:</strong> {product.category}</li>
-          <li><strong>Kraj:</strong> {product.country}</li>
-          <li><strong>ABV:</strong> {product.abv}</li>
-        </ul>
+      {product.howToPresent && (
+        <section>
+          <h2>How to present</h2>
+          <p>{product.howToPresent}</p>
+        </section>
+      )}
 
-        {product.whenToOffer && (
-          <>
-            <h2>When to offer</h2>
-            <ul>
-              {product.whenToOffer.map(item => <li>{item}</li>)}
-            </ul>
-          </>
-        )}
+      {product.alternatives && (
+        <section>
+          <h2>Alternatives</h2>
+          <ul>
+            {product.alternatives.map((alt) => (
+              <li>{alt}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
-        {product.howToPresent && (
-          <>
-            <h2>Co warto wiedzieć</h2>
-            <p>{product.howToPresent}</p>
-          </>
-        )}
-
-        {product.alternatives && (
-          <>
-            <h2>Alternatywy</h2>
-            <ul>
-              {product.alternatives.map(a => <li>{a}</li>)}
-            </ul>
-          </>
-        )}
-
-        {product.nose && (
-          <>
-            <h2>W zapachu</h2>
-            <p>{product.nose}</p>
-          </>
-        )}
-      </div>
+      {product.nose && (
+        <section>
+          <h2>W zapachu</h2>
+          <p>{product.nose}</p>
+        </section>
+      )}
     </div>
   </body>
 </html>
