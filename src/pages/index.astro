@@ -1,6 +1,5 @@
 ---
 import "../styles/main.css";
-
 const BASE = import.meta.env.BASE_URL;
 ---
 
@@ -11,17 +10,23 @@ const BASE = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alcohol Reference</title>
   </head>
+
   <body>
-    <h1>Alcohol Reference</h1>
+    <div class="container">
+      <h1>Alcohol Reference</h1>
 
-    <input
-      id="search"
-      type="text"
-      placeholder="Szukaj produktu..."
-      autocomplete="off"
-    />
+      <!-- SEARCH -->
+      <input
+        id="search"
+        class="search-input"
+        type="text"
+        placeholder="Szukaj produktu..."
+        autocomplete="off"
+      />
 
-    <ul id="results"></ul>
+      <!-- RESULTS -->
+      <div id="results" class="results"></div>
+    </div>
 
     <script>
       const BASE = import.meta.env.BASE_URL;
@@ -39,29 +44,4 @@ const BASE = import.meta.env.BASE_URL;
         });
 
       function render(list) {
-        results.innerHTML = "";
-        list.forEach(p => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = `${BASE}products/${p.slug}/`;
-          a.textContent = p.name;
-          li.appendChild(a);
-          results.appendChild(li);
-        });
-      }
-
-      input.addEventListener("input", e => {
-        const q = e.target.value.toLowerCase();
-        render(
-          products.filter(p =>
-            p.name.toLowerCase().includes(q)
-          )
-        );
-      });
-    </script>
-  </body>
-</html>
-
-      
-
-    
+        results.innerHTML =
