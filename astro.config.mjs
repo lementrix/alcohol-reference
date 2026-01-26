@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://ATG.github.io",
+  site: "https://lementrix.github.io",
   base: "/alcohol-reference/",
 });
