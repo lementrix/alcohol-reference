@@ -1,61 +1,49 @@
 ---
+import products from "../data/products";
 import "../styles/main.css";
+
+const BASE = import.meta.env.BASE_URL;
 ---
 
-<h1>Alcohol Quick Reference</h1>
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alcohol Reference</title>
+  </head>
 
-<div class="search-wrapper">
-  <input
-    id="search"
-    type="text"
-    placeholder="Szukaj produktu..."
-    autocomplete="off"
-  />
-  <div id="results" class="results-dropdown"></div>
-</div>
+  <body>
+    <h1>Alcohol Reference</h1>
 
-<script>
-  const BASE = import.meta.env.BASE_URL;
-  let products = [];
+    <input
+      id="search"
+      type="text"
+      placeholder="Szukaj produktu…"
+    />
 
-  fetch(`${BASE}data/products.json`)
-    .then(res => res.json())
-    .then(data => {
-      products = data;
-      console.log("Products loaded:", products.length);
-    });
+    <ul id="list">
+      {products.map((p) => (
+        <li>
+          <a href={`${BASE}products/${p.slug}`}>
+            {p.name}
+          </a>
+        </li>
+      ))}
+    </ul>
 
-  const input = document.getElementById("search");
-  const results = document.getElementById("results");
+    <script>
+      const input = document.getElementById("search");
+      const items = document.querySelectorAll("#list li");
 
-  input.addEventListener("input", () => {
-    const query = input.value.toLowerCase();
-    results.innerHTML = "";
-
-    if (!query) return;
-
-    products
-      .filter(p =>
-        p.name.toLowerCase().includes(query) ||
-        (p.keywords && p.keywords.some(k => k.toLowerCase().includes(query)))
-      )
-      .forEach(p => {
-        const a = document.createElement("a");
-        a.href = `${BASE}products/${p.slug}`;
-        a.textContent = p.name;
-        a.className = "result-item";
-        results.appendChild(a);
+      input.addEventListener("input", () => {
+        const value = input.value.toLowerCase();
+        items.forEach(li => {
+          li.style.display = li.textContent.toLowerCase().includes(value)
+            ? ""
+            : "none";
+        });
       });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-
+    </script>
+  </body>
+</html>
