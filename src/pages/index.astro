@@ -1,14 +1,12 @@
 ---
 import products from "../data/products";
 import "../styles/main.css";
-
-const BASE = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Alcohol Reference</title>
   </head>
@@ -16,17 +14,24 @@ const BASE = import.meta.env.BASE_URL;
   <body>
     <h1>Alcohol Reference</h1>
 
-    <input
-      id="search"
-      type="text"
-      placeholder="Szukaj produktu…"
-    />
+    <!-- SEARCH -->
+    <div class="search">
+      <input
+        type="text"
+        id="search"
+        placeholder="Szukaj produktu..."
+        autocomplete="off"
+      />
 
+      <div class="results" id="results"></div>
+    </div>
+
+    <!-- FALLBACK LIST -->
     <ul id="list">
-      {products.map((p) => (
+      {products.map(product => (
         <li>
-          <a href={`${BASE}products/${p.slug}`}>
-            {p.name}
+          <a href={`/products/${product.slug}/`}>
+            {product.name}
           </a>
         </li>
       ))}
@@ -34,14 +39,27 @@ const BASE = import.meta.env.BASE_URL;
 
     <script>
       const input = document.getElementById("search");
-      const items = document.querySelectorAll("#list li");
+      const results = document.getElementById("results");
 
       input.addEventListener("input", () => {
-        const value = input.value.toLowerCase();
-        items.forEach(li => {
-          li.style.display = li.textContent.toLowerCase().includes(value)
-            ? ""
-            : "none";
+        const q = input.value.toLowerCase().trim();
+        results.innerHTML = "";
+
+        if (!q) return;
+
+        const matches = {JSON.stringify(products)}.filter(p =>
+          p.name.toLowerCase().includes(q)
+        );
+
+        matches.forEach(p => {
+          const a = document.createElement("a");
+          a.href = `/products/${p.slug}/`;
+          a.className = "result-item";
+          a.innerHTML = `
+            <strong>${p.name}</strong>
+            <span class="subtitle">${p.subtitle ?? ""}</span>
+          `;
+          results.appendChild(a);
         });
       });
     </script>
