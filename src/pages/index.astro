@@ -21,47 +21,52 @@ const BASE = import.meta.env.BASE_URL;
       autocomplete="off"
     />
 
+    <ul id="results"></ul>
+
     <script>
-  const BASE = import.meta.env.BASE_URL;
+      const BASE = import.meta.env.BASE_URL;
 
-  const input = document.getElementById("search");
-  const results = document.getElementById("results");
+      const input = document.getElementById("search");
+      const results = document.getElementById("results");
 
-  let products = [];
+      let products = [];
 
-  fetch(`${BASE}data/products.json`)
-    .then(res => res.json())
-    .then(data => {
-      products = data;
-      results.innerHTML = ""; // ⬅️ ничего не показываем по умолчанию
-    });
+      fetch(`${BASE}data/products.json`)
+        .then(res => res.json())
+        .then(data => {
+          products = data;
+          render([]);
+        });
 
-  function render(list) {
-    results.innerHTML = "";
-    list.forEach(p => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = `${BASE}products/${p.slug}/`;
-      a.textContent = p.name;
-      li.appendChild(a);
-      results.appendChild(li);
-    });
-  }
+      function render(list) {
+        results.innerHTML = "";
 
-  input.addEventListener("input", e => {
-    const q = e.target.value.toLowerCase().trim();
+        if (list.length === 0) return;
 
-    if (!q) {
-      results.innerHTML = ""; // ⬅️ очистка, если поле пустое
-      return;
-    }
+        list.forEach(p => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `${BASE}products/${p.slug}/`;
+          a.textContent = p.name;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
+      }
 
-    render(
-      products.filter(p =>
-        p.name.toLowerCase().includes(q)
-      )
-    );
-  });
-</script>
+      input.addEventListener("input", e => {
+        const q = e.target.value.trim().toLowerCase();
+
+        if (q === "") {
+          render([]);
+          return;
+        }
+
+        const filtered = products.filter(p =>
+          p.name.toLowerCase().includes(q)
+        );
+
+        render(filtered);
+      });
+    </script>
   </body>
 </html>
