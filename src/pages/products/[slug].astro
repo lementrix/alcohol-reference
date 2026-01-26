@@ -4,10 +4,8 @@ import products from "../../data/products";
 const { slug } = Astro.params;
 const BASE = import.meta.env.BASE_URL;
 
-// ищем продукт по slug
 const product = products.find(p => p.slug === slug);
 
-// если вдруг не найден — можно показать 404
 if (!product) {
   throw new Error(`Product not found: ${slug}`);
 }
@@ -19,20 +17,21 @@ if (!product) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{product.name}</title>
+
     <style>
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
         margin: 0;
         padding: 16px;
-        background: #fafafa;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background: #f6f6f6;
         color: #111;
       }
 
-      .back {
+      a.back {
         display: inline-block;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         text-decoration: none;
-        color: #555;
+        color: #444;
         font-size: 14px;
       }
 
@@ -40,13 +39,12 @@ if (!product) {
         background: #fff;
         border-radius: 12px;
         padding: 16px;
-        box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 16px rgba(0,0,0,.08);
       }
 
       .header {
         display: flex;
         gap: 16px;
-        align-items: flex-start;
       }
 
       .image {
@@ -58,11 +56,12 @@ if (!product) {
         width: 100%;
         height: auto;
         object-fit: contain;
+        display: block;
       }
 
       h1 {
+        margin: 0 0 6px;
         font-size: 22px;
-        margin: 0 0 8px;
       }
 
       .meta {
@@ -75,8 +74,8 @@ if (!product) {
       }
 
       .section h2 {
+        margin: 0 0 8px;
         font-size: 16px;
-        margin-bottom: 8px;
       }
 
       .section ul {
@@ -97,11 +96,10 @@ if (!product) {
     <a class="back" href={BASE}>← Powrót</a>
 
     <div class="card">
-      <!-- HEADER -->
       <div class="header">
         <div class="image">
           <img
-            src={`${BASE}${product.image.replace(/^\/+/, "")}`}
+            src={`${BASE}${product.image}`}
             alt={product.name}
             loading="lazy"
           />
@@ -116,7 +114,6 @@ if (!product) {
         </div>
       </div>
 
-      <!-- KIEDY POLECAĆ -->
       {product.when && (
         <div class="section">
           <h2>Jeśli klient pyta o:</h2>
@@ -126,7 +123,6 @@ if (!product) {
         </div>
       )}
 
-      <!-- CO WARTO WIEDZIEĆ -->
       {product.note && (
         <div class="section">
           <h2>Co warto wiedzieć</h2>
