@@ -1,0 +1,233 @@
+[
+  {
+    "slug": "glenfiddich-vat-01",
+    "name": "Glenfiddich VAT 01",
+    "subtitle": "Single Malt · Speyside · Travel Retail",
+    "category": "whisky-single-malt",
+    "country": "Scotland",
+    "region": "Speyside",
+    "abv": "40%",
+    "image": "/bottle_img/glenfiddich-vat01.webp",
+
+    "whenToOffer": [
+      "Klient szuka Glenfiddich 12",
+      "Klient chce łagodną, niedymną whisky",
+      "Klient interesuje się edycjami airport exclusive"
+    ],
+
+    "maturation": "American Oak, European Oak, and Red Wine Casks",
+
+    "howToPresent": "To edycja travel retail, tworzona w systemie solera – każda partia bazuje na poprzedniej.",
+
+    "alternatives": [
+      "Glenfiddich 12",
+      "Glenlivet 12",
+      "Balvenie 12"
+    ],
+
+    "aroma": "Owocowo-kwiatowy, z nutami wanilii, kremowego toffi i delikatnego dębu.",
+    "taste": "Gładki, słodowo-owocowy, z wanilią i lekką nutą przypraw.",
+    "finish": "Średni, czysty, lekko dębowy."
+  },
+
+  {
+    "slug": "james-hennessy",
+    "name": "James Hennessy",
+    "subtitle": "Koniak · Francja · XO style",
+    "category": "brandy",
+    "country": "France",
+    "abv": "40%",
+    "image": "/bottle_img/james-hennessy.png",
+    "maturation": "7-20 lat w uzywanych beczkach z francuskiego dębu",
+
+    "whenToOffer": [
+      "Klient szuka prestiżowego koniaku na prezent",
+      "Klient interesuje się historią marki Hennessy",
+      "Klient chce czegoś bardziej eleganckiego niż VS"
+    ],
+
+    "howToPresent": "James Hennessy to pozycja pomiędzy VSOP a XO – bardziej dojrzała niż VSOP, ale lżejsza i przystępniejsza niż klasyczne XO.Butelkę zaprojektował Marc Newson, co czyni ten koniak bardzo dobrym wyborem na prezent.",
+
+    "alternatives": [
+      "Hennessy XO",
+      "Martell Cordon Bleu",
+      "Rémy Martin 1738"
+    ],
+
+    "aroma": "Suszone owoce, wanilia, delikatne przyprawy i nuty dębu.",
+    "taste": "Bogaty, aksamitny, z nutami karmelu i przypraw.",
+    "finish": "Długi, rozgrzewający, lekko korzenny."
+  },
+
+  {
+    "slug": "chopin-vintage",
+    "name": "Chopin Vintage Young Potato Arielle",
+    "subtitle": "Wódka ziemniaczana · Polska · Starzona",
+    "category": "vodka",
+    "country": "Poland",
+    "abv": "42,7%",
+    "image": "/bottle_img/vintage_young_potato.png",
+    "maturation": "5 lat w nowych dębowych beczkach",
+    
+
+    "whenToOffer": [
+      "Klient szuka wyjątkowej polskiej wódki",
+      "Klient interesuje się wódkami premium",
+      "Klient chce spróbować wódki starzonej w beczce"
+    ],
+
+    "howToPresent": "Chopin Vintage to rzadkość – wódka ziemniaczana leżakowana w dębowych beczkach. Łączy czystość wódki z nutami znanymi z whisky.",
+
+    "alternatives": [
+      "Chopin Family Reserve",
+      "Belvedere 10",
+      "Oak Aged Vodka"
+    ],
+
+    "aroma": "Delikatny, owocowy z nutami suszonej śliwki i gruszki, na końcu zapach suchego dębowego drewna.",
+    "taste": "Miękka, lekko słodka, z waniliowym akcentem.",
+    "finish": "Gładki, lekko beczkowy."
+  },
+
+  {
+    "slug": "chopin-etiuda",
+    "name": "Chopin Etiuda",
+    "subtitle": "Wódka rzemieślnicza · Polska",
+    "category": "vodka",
+    "country": "Poland",
+    "abv": "35%",
+    "image": "/bottle_img/chopin-etiuda.webp",
+
+    "whenToOffer": [
+      "Klient szuka wiśniowki do drinków",
+      "Klient szuka wysokoprocentowej, mniej słodkiej wiśniówki",
+      "Klient "
+    ],
+
+    "howToPresent": "Etiuda Wiśniowa z Gorzelni Chopin to doskonały wybór o każdej porze roku. Niespiesznie sączona w długie jesienne wieczory delikatnie rozgrzeje a podana w wersji letniej na lodzie lub lekko schłodzona oprócz niezrównanych doznań smakowych, przyniesie soczyste orzeźwienie.",
+
+    "alternatives": [
+      "Dębowa wiśniowka",
+      "",
+      ""
+    ],
+
+    "aroma": "Wiśniowy, delikatnie zbożowy.",
+    "taste": "słodka, z wyraźnym charakterem, ostra.",
+    "finish": "Krótki, słodki wisniowy."
+  },
+
+  {
+    "slug": "ratafia-kaszubska",
+    "name": "Ratafia-Kaszubska",
+    "subtitle": "Nalewka · Polska · Bez sztucznej słodyczy",
+    "category": "nalewka",
+    "country": "Poland",
+    "abv": "30%",
+    "image": "/bottle_img/longinus-wisniowka.webp",
+
+    "whenToOffer": [
+      "Klient szuka prawdziwej nalewki, nie likieru",
+      "Klient chce coś wiśniowego bez przesłodzenia",
+      "Klient interesuje się polską tradycją"
+    ],
+
+    "howToPresent": "To klasyczna nalewka wiśniowa – bez cukrowego efektu likieru. Bardziej owocowa i naturalna.",
+
+    "alternatives": [
+      "Wiśniowa okowita",
+      "Likier wiśniowy premium",
+      "Porto Ruby"
+    ],
+
+    "aroma": "Świeża wiśnia, lekki migdał.",
+    "taste": "Owocowy, wytrawniejszy niż likier.",
+    "finish": "Średni, lekko kwaskowy."
+  },
+
+  {
+    "slug": "jaworzanski-jarzebiak",
+    "name": "Jaworzański Jarzębiak",
+    "subtitle": "Destylat owocowy · Polska",
+    "category": "okowita",
+    "country": "Poland",
+    "abv": "37.5%",
+    "image": "/bottle_img/sliwowica-polska.webp",
+
+    "whenToOffer": [
+      "Klient interesuje się mocnymi alkoholami",
+      "Klient szuka alternatywy dla brandy",
+      "Klient chce spróbować czegoś autentycznego"
+    ],
+
+    "howToPresent": "Polska brandy z jarzębiny – owocowa, wytrawna, z charakterystyczną cierpkością. Idealna dla miłośników mocnych trunków.",
+
+    "alternatives": [
+      "Brandy",
+      "Jarzębiak",
+      " "
+    ],
+
+    "aroma": "Nuty dębowe, owoce jarzebiny.",
+    "taste": "słodki, wyczuwalna nuta cierpkości.",
+    "finish": "Długi, rozgrzewający."
+  },
+
+  {
+    "slug": "trunek-piernikowy",
+    "name": "Trunek Piernikowy",
+    "subtitle": "Likier korzenny · Toruń",
+    "category": "Likier",
+    "country": "Poland",
+    "abv": "32%",
+    "image": "/bottle_img/piernikowy-trunek.webp",
+
+    "whenToOffer": [
+      "Klient szuka lokalnego produktu",
+      "Klient chce coś korzennego",
+      "Klient kupuje prezent z Polski"
+    ],
+
+    "howToPresent": "Trunek inspirowany toruńskim piernikiem – korzenny, ciepły, idealny na zimę.",
+
+    "alternatives": [
+      "Likier korzenny",
+      "Amaro",
+      "Spiced rum"
+    ],
+
+    "aroma": "Cynamon, goździki, imbir.",
+    "taste": "Słodko-korzenny, rozgrzewający.",
+    "finish": "Średni, przyprawowy."
+  },
+
+  {
+    "slug": "sublimat-kopernika",
+    "name": "Sublimat Winny Kopernika",
+    "subtitle": "Miód pitny",
+    "category": "Likier",
+    "country": "Poland",
+    "abv": "32%",
+    "image": "/bottle_img/sublimat-winny.png",
+
+    "whenToOffer": [
+      "Klient pyta o regionalne, historyczne ciekawostki",
+      "Klient interesuje się niszowymi produktami",
+      "Klient chce coś innego niż miód pitny"
+    ],
+
+    "howToPresent": "Sublimat to rekonstrukcja historycznego trunku z czasów Mikołaja Kopernika – destylat winny o bogatym, korzennym charakterze.",
+
+    "alternatives": [
+      "Piernikowe likiery",
+      "Miody pitne",
+      "Miodowe likiery"
+    ],
+
+    "aroma": "Cynamon, goździki, miód, szafran, figi, pierniki.",
+    "taste": "Słodko-korzenny, rozgrzewający, piernikowy.",
+    "finish": "Średni, korzenny, piernikowy, miodowy."
+  }
+]
+
+

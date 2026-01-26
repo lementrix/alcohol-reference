@@ -1,0 +1,113 @@
+---
+import { products } from "../../data/products";
+import { categories } from "../../data/categories";
+import "../../styles/main.css";
+
+export async function getStaticPaths() {
+  return products.map(product => ({
+    params: { slug: product.slug },
+    props: { product }
+  }));
+}
+
+const { product } = Astro.props;
+---
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <title>{product.name}</title>
+</head>
+<body>
+
+<div class="product-page">
+  <a href="/" class="back-link">← Back</a>
+
+  <!-- TOP BLOCK -->
+  <div class="product-header">
+    <img
+      src={product.image}
+      alt={product.name}
+      class="product-image"
+    />
+
+    <div class="product-info">
+      <h1 class="product-title">{product.name}</h1>
+      <p class="product-subtitle">{product.subtitle}</p>
+
+      <ul class="product-meta">
+  <li><strong>Kategoria:</strong> {product.category}</li>
+  <li><strong>Kraj:</strong> {product.country}</li>
+  <li><strong>ABV:</strong> {product.abv}</li>
+
+  {product.maturation && (
+    <li>
+      <strong>Dojrzewanie:</strong> {product.maturation}
+    </li>
+  )}
+</ul>
+
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+  {product.whenToOffer && (
+    <section class="product-section">
+      <h2>Dla kogo</h2>
+      <ul>
+        {product.whenToOffer.map(item => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {product.howToPresent && (
+    <section class="product-section">
+      <h2>Warto wiedzieć</h2>
+      <p class="quote">“{product.howToPresent}”</p>
+    </section>
+  )}
+
+  {product.alternatives && (
+    <section class="product-section">
+      <h2>Może służyć alternatywą</h2>
+      <ul>
+        {product.alternatives.map(item => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {product.aroma && (
+    <section class="product-section">
+      <h2>W zapachu</h2>
+      <p>{product.aroma}</p>
+    </section>
+  )}
+
+  {product.taste && (
+    <section class="product-section">
+      <h2>W smaku</h2>
+      <p>{product.taste}</p>
+    </section>
+  )}
+
+  {product.finish && (
+    <section class="product-section">
+      <h2>Finisz</h2>
+      <p>{product.finish}</p>
+    </section>
+  )}
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

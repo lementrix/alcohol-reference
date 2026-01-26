@@ -1,0 +1,58 @@
+---
+import "../styles/main.css";
+---
+
+<h1>Alcohol Quick Reference</h1>
+
+<div class="search-wrapper">
+  <input
+    id="search"
+    type="text"
+    placeholder="Szukaj produktu..."
+    autocomplete="off"
+  />
+  <div id="results" class="results-dropdown"></div>
+</div>
+
+<script>
+  let products = [];
+
+  fetch("/data/products.json")
+    .then(res => res.json())
+    .then(data => {
+      products = data;
+    });
+
+  const input = document.getElementById("search");
+  const results = document.getElementById("results");
+
+  input.addEventListener("input", () => {
+    const query = input.value.toLowerCase();
+    results.innerHTML = "";
+    if (!query) return;
+
+    products
+      .filter(p =>
+        p.name.toLowerCase().includes(query) ||
+        (p.keywords && p.keywords.some(k => k.toLowerCase().includes(query)))
+      )
+      .forEach(p => {
+        const a = document.createElement("a");
+        a.href = `/products/${p.slug}`;
+        a.className = "result-item";
+        a.textContent = p.name;
+        results.appendChild(a);
+      });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
