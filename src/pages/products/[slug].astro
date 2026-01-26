@@ -2,8 +2,6 @@
 import products from "../../data/products";
 
 const { slug } = Astro.params;
-const BASE = import.meta.env.BASE_URL;
-
 const product = products.find(p => p.slug === slug);
 
 if (!product) {
@@ -18,11 +16,14 @@ if (!product) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{product.name}</title>
 
+    <!-- 🔑 КЛЮЧЕВОЙ ФИКС -->
+    <base href={import.meta.env.BASE_URL} />
+
     <style>
       body {
         margin: 0;
         padding: 16px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: system-ui, sans-serif;
         background: #f6f6f6;
         color: #111;
       }
@@ -92,14 +93,15 @@ if (!product) {
   </head>
 
   <body>
-    <!-- BACK -->
-    <a class="back" href={BASE}>← Powrót</a>
+    <!-- ← BACK РАБОТАЕТ -->
+    <a class="back" href="./">← Powrót</a>
 
     <div class="card">
       <div class="header">
         <div class="image">
+          <!-- 🖼 КАРТИНКА РАБОТАЕТ -->
           <img
-            src={`${BASE}${product.image}`}
+            src={product.image}
             alt={product.name}
             loading="lazy"
           />
