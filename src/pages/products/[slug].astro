@@ -1,16 +1,17 @@
 ---
-import products from "../../data/products";
-
 const { slug } = Astro.params;
 const BASE = import.meta.env.BASE_URL;
+
+const response = await fetch(
+  new URL(`${BASE}data/products.json`, Astro.url)
+);
+const products = await response.json();
 
 const product = products.find(p => p.slug === slug);
 
 if (!product) {
   throw new Error(`Product not found: ${slug}`);
 }
-
-const categoryClass = `category category-${product.category}`;
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ const categoryClass = `category category-${product.category}`;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{product.name}</title>
   </head>
+
   <body>
     <div class="container">
       <a class="back-link" href={`${BASE}`}>← Powrót</a>
@@ -33,14 +35,10 @@ const categoryClass = `category category-${product.category}`;
           />
 
           <div>
-            <span class={categoryClass}>
-              {product.category}
-            </span>
+            <h1>{product.name}</h1>
+            <div class="subtitle">{product.subtitle}</div>
 
-            <h1 class="product-title">{product.name}</h1>
-            <div class="product-subtitle">{product.subtitle}</div>
-
-            <ul class="product-meta">
+            <ul class="meta">
               <li><strong>Kategoria:</strong> {product.category}</li>
               <li><strong>Kraj:</strong> {product.country}</li>
               <li><strong>ABV:</strong> {product.abv}</li>
@@ -53,8 +51,8 @@ const categoryClass = `category category-${product.category}`;
           </div>
         </div>
 
-        {product.whenToOffer && product.whenToOffer.length > 0 && (
-          <section class="section">
+        {product.whenToOffer?.length > 0 && (
+          <section>
             <h2>Dla kogo</h2>
             <ul>
               {product.whenToOffer.map(item => (
@@ -65,15 +63,15 @@ const categoryClass = `category category-${product.category}`;
         )}
 
         {product.howToPresent && (
-          <section class="section">
+          <section>
             <h2>Jak prezentować</h2>
             <p>{product.howToPresent}</p>
           </section>
         )}
 
-        {/* 🆕 COCKTAILS SECTION */}
-        {product.cocktails && product.cocktails.length > 0 && (
-          <section class="section">
+        {/* 🆕 DRINKI */}
+        {product.cocktails?.length > 0 && (
+          <section>
             <h2>W jakich drinkach można użyć</h2>
             <ul>
               {product.cocktails.map(drink => (
@@ -83,8 +81,8 @@ const categoryClass = `category category-${product.category}`;
           </section>
         )}
 
-        {product.alternatives && product.alternatives.length > 0 && (
-          <section class="section">
+        {product.alternatives?.length > 0 && (
+          <section>
             <h2>Służy alternatywą do</h2>
             <ul>
               {product.alternatives.map(alt => (
@@ -94,8 +92,6 @@ const categoryClass = `category category-${product.category}`;
           </section>
         )}
       </div>
-
-      <div class="spacer"></div>
     </div>
   </body>
 </html>
