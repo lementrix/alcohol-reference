@@ -1,21 +1,19 @@
 ---
-import products from "../../data/products";
+import products from "../../data/products.json";
 import "../../styles/main.css";
 
+/**
+ * ОБЯЗАТЕЛЬНО для GitHub Pages
+ * Astro должен знать все slug заранее
+ */
 export async function getStaticPaths() {
-  return products.map(product => ({
-    params: { slug: product.slug }
+  return products.map((product) => ({
+    params: { slug: product.slug },
+    props: { product },
   }));
 }
 
-const { slug } = Astro.params;
-const BASE = import.meta.env.BASE_URL;
-
-const product = products.find(p => p.slug === slug);
-
-if (!product) {
-  throw new Error("Product not found");
-}
+const { product } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -24,15 +22,18 @@ if (!product) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{product.name}</title>
+
+    <!-- ВАЖНО для GitHub Pages -->
+    <base href={import.meta.env.BASE_URL} />
   </head>
 
-  <body>
-    <a class="back" href="./">← Powrót</a>
+  <body data-category={product.category}>
+    <a class="back" href={`${import.meta.env.BASE_URL}`}>← Powrót</a>
 
     <div class="card">
       <div class="image">
         <img
-          src={`${BASE}${product.image}`}
+          src={`${import.meta.env.BASE_URL}${product.image}`}
           alt={product.name}
         />
       </div>
@@ -57,7 +58,7 @@ if (!product) {
           <section>
             <h2>Dla kogo</h2>
             <ul>
-              {product.whenToOffer.map(item => (
+              {product.whenToOffer.map((item) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -71,23 +72,12 @@ if (!product) {
           </section>
         )}
 
-        {product.cocktails && (
-          <section>
-            <h2>W jakich drinkach można użyć</h2>
-            <ul>
-              {product.cocktails.map(drink => (
-                <li>{drink}</li>
-              ))}
-            </ul>
-          </section>
-        )}
-
         {product.alternatives && (
           <section>
             <h2>Służy alternatywą do</h2>
             <ul>
-              {product.alternatives.map(item => (
-                <li>{item}</li>
+              {product.alternatives.map((alt) => (
+                <li>{alt}</li>
               ))}
             </ul>
           </section>
