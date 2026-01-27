@@ -43,15 +43,15 @@
     "whenToOffer": [
       "Klient szuka prestiżowego koniaku na prezent",
       "Klient interesuje się historią marki Hennessy",
-      "Klient chce czegoś bardziej eleganckiego niż VS"
+      "Klient chce czegoś bardziej eleganckiego niż VSOP"
     ],
 
     "howToPresent": "James Hennessy to pozycja pomiędzy VSOP a XO – bardziej dojrzała niż VSOP, ale lżejsza i przystępniejsza niż klasyczne XO.Butelkę zaprojektował Marc Newson, co czyni ten koniak bardzo dobrym wyborem na prezent.",
 
     "alternatives": [
-      "Hennessy XO",
-      "Martell Cordon Bleu",
-      "Rémy Martin 1738"
+      "Henessy VSOP",
+      "Martell Nobliage",
+      "XO mniejszych domów Koniaków"
     ],
 
     "aroma": "Suszone owoce, wanilia, delikatne przyprawy i nuty dębu.",
@@ -71,7 +71,7 @@
     
 
     "whenToOffer": [
-      "Klient szuka wyjątkowej polskiej wódki",
+      "Klient szuka polską whisky, polski starzony alkohol",
       "Klient interesuje się wódkami premium",
       "Klient chce spróbować wódki starzonej w beczce"
     ],
@@ -79,12 +79,12 @@
     "howToPresent": "Chopin Vintage to rzadkość – wódka ziemniaczana leżakowana w dębowych beczkach. Łączy czystość wódki z nutami znanymi z whisky.",
 
     "alternatives": [
-      "Chopin Family Reserve",
-      "Belvedere 10",
-      "Oak Aged Vodka"
+      "Chopin Vintage Potato",
+      "Polskie whisky",
+      "Polskie alkohole starzone"
     ],
 
-    "aroma": "Delikatny, owocowy z nutami suszonej śliwki i gruszki, na końcu zapach suchego dębowego drewna.",
+    "aroma": "Intensywny i mocny – suszone owoce, korzenie chrzanu.",
     "taste": "Miękka, lekko słodka, z waniliowym akcentem.",
     "finish": "Gładki, lekko beczkowy."
   },
@@ -100,8 +100,8 @@
 
     "whenToOffer": [
       "Klient szuka wiśniowki do drinków",
-      "Klient szuka wysokoprocentowej, mniej słodkiej wiśniówki",
-      "Klient "
+      "Klient potrzebuję wysokoprocentowej, mniej słodkiej wiśniówki",
+      "Klient szukający wódek smakowych"
     ],
 
     "howToPresent": "Etiuda Wiśniowa z Gorzelni Chopin to doskonały wybór o każdej porze roku. Niespiesznie sączona w długie jesienne wieczory delikatnie rozgrzeje a podana w wersji letniej na lodzie lub lekko schłodzona oprócz niezrównanych doznań smakowych, przyniesie soczyste orzeźwienie.",
@@ -129,19 +129,19 @@
     "whenToOffer": [
       "Klient szuka prawdziwej nalewki, nie likieru",
       "Klient chce coś wiśniowego bez przesłodzenia",
-      "Klient interesuje się polską tradycją"
+      "Klient szukający Wiśniewskiego"
     ],
 
     "howToPresent": "To klasyczna nalewka wiśniowa – bez cukrowego efektu likieru. Bardziej owocowa i naturalna.",
 
     "alternatives": [
-      "Wiśniowa okowita",
-      "Likier wiśniowy premium",
-      "Porto Ruby"
+      "Najlepszy zamiennik Wiśniewskiego",
+      "Pijana wiśnia",
+      "Inne wiśniówki"
     ],
 
     "aroma": "Świeża wiśnia, lekki migdał.",
-    "taste": "Owocowy, wytrawniejszy niż likier.",
+    "taste": "Owocowy, mniej slodki niż likieru.",
     "finish": "Średni, lekko kwaskowy."
   },
 
@@ -155,9 +155,9 @@
     "image": "bottle_img/jarzebiak-jaworzanski.png",
 
     "whenToOffer": [
-      "Klient interesuje się mocnymi alkoholami",
-      "Klient szuka alternatywy dla brandy",
-      "Klient chce spróbować czegoś autentycznego"
+      "Klient szuka coś podobnego do rakii",
+      "Klient szuka polską brandy",
+      "Klient szuka jarzębiaka"
     ],
 
     "howToPresent": "Polska brandy z jarzębiny – owocowa, wytrawna, z charakterystyczną cierpkością. Idealna dla miłośników mocnych trunków.",
@@ -165,7 +165,7 @@
     "alternatives": [
       "Brandy",
       "Jarzębiak",
-      " "
+      "Wódki smakowe"
     ],
 
     "aroma": "Nuty dębowe, owoce jarzebiny.",
@@ -180,12 +180,13 @@
     "category": "Likier",
     "country": "Poland",
     "abv": "32%",
-    "image": "bottle_img/piernikowy-trunek.webp",
+    "image":"
+bottle_img/piernikowy-trunek.webp",
 
     "whenToOffer": [
       "Klient szuka lokalnego produktu",
       "Klient chce coś korzennego",
-      "Klient kupuje prezent z Polski"
+      "Klient lubi pierniki lub może był czy jest z Torunia"
     ],
 
     "howToPresent": "Trunek inspirowany toruńskim piernikiem – korzenny, ciepły, idealny na zimę.",
@@ -193,7 +194,7 @@
     "alternatives": [
       "Likier korzenny",
       "Amaro",
-      "Spiced rum"
+      "jack cinnamon, fireball"
     ],
 
     "aroma": "Cynamon, goździki, imbir.",
@@ -239,22 +240,22 @@
     "image": "bottle_img/polski_zieminak.png",
 
     "whenToOffer": [
-      "Klient pyta o regionalne, historyczne ciekawostki",
+      "Klient pyta o rzemieślnicze alkohole",
       "Klient interesuje się niszowymi produktami",
-      "Klient chce coś innego niż miód pitny"
+      "Klient chce coś innego niż popularne wódki ziemniaczane"
     ],
 
-    "howToPresent": "Sublimat to rekonstrukcja historycznego trunku z czasów Mikołaja Kopernika – destylat winny o bogatym, korzennym charakterze.",
+    "howToPresent": "To specjalna linia polskich wódek,  wytwarzanych w krótkoseryjnych, limitowanych partiach. Jest poddawana procesowi leżakowania.Posiada certyfikat koszerności.",
 
     "alternatives": [
-      "Piernikowe likiery",
-      "Miody pitne",
-      "Miodowe likiery"
+      "Chopin potato",
+      "wódki koszerne",
+      "inne wódki ziemniaczane"
     ],
 
-    "aroma": "Cynamon, goździki, miód, szafran, figi, pierniki.",
-    "taste": "Słodko-korzenny, rozgrzewający, piernikowy.",
-    "finish": "Średni, korzenny, piernikowy, miodowy."
+    "aroma": "Intensywny, ziemniaczany, ziemisty.",
+    "taste": "Oleisty, lekko słodki, łagodny",
+    "finish": "Średni, oleisty, przyprawowy."
   }
 ]
 
