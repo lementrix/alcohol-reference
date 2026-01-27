@@ -2,6 +2,12 @@
 import products from "../../data/products";
 import "../../styles/main.css";
 
+export async function getStaticPaths() {
+  return products.map(product => ({
+    params: { slug: product.slug }
+  }));
+}
+
 const { slug } = Astro.params;
 const BASE = import.meta.env.BASE_URL;
 
