@@ -4,7 +4,6 @@ import "../../styles/main.css";
 
 /**
  * ОБЯЗАТЕЛЬНО для GitHub Pages
- * Astro должен знать все slug заранее
  */
 export async function getStaticPaths() {
   return products.map((product) => ({
@@ -22,13 +21,10 @@ const { product } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{product.name}</title>
-
-    <!-- ВАЖНО для GitHub Pages -->
     <base href={import.meta.env.BASE_URL} />
   </head>
 
   <body data-category={product.category}>
-    <!-- ← BACK -->
     <a class="back" href="./">← Powrót</a>
 
     <div class="card">
@@ -74,6 +70,18 @@ const { product } = Astro.props;
         <section>
           <h2>How to present</h2>
           <p>{product.howToPresent}</p>
+        </section>
+      )}
+
+      {/* 🆕 COCKTAILS */}
+      {product.cocktails && (
+        <section>
+          <h2>W jakich drinkach można użyć</h2>
+          <ul>
+            {product.cocktails.map((drink) => (
+              <li>{drink}</li>
+            ))}
+          </ul>
         </section>
       )}
 
