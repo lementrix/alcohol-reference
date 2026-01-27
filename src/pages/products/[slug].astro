@@ -24,7 +24,7 @@ if (!product) {
     <title>{product.name}</title>
   </head>
 
-  <body data-category={product.category}>
+  <body>
     <a class="back" href={`${BASE}`}>← Powrót</a>
 
     <div class="card">
@@ -66,17 +66,6 @@ if (!product) {
           <section>
             <h2>Jak prezentować</h2>
             <p>{product.howToPresent}</p>
-          </section>
-        )}
-
-        {product.cocktails?.length > 0 && (
-          <section>
-            <h2>W jakich drinkach można użyć</h2>
-            <ul>
-              {product.cocktails.map(drink => (
-                <li>{drink}</li>
-              ))}
-            </ul>
           </section>
         )}
 
