@@ -1,99 +1,101 @@
 ---
 import products from "../../data/products";
-import "../../styles/main.css";
 
-/**
- * ОБЯЗАТЕЛЬНО для GitHub Pages
- * Astro должен знать все slug заранее
- */
-export async function getStaticPaths() {
-  return products.map((product) => ({
-    params: { slug: product.slug },
-    props: { product },
-  }));
+const { slug } = Astro.params;
+const BASE = import.meta.env.BASE_URL;
+
+const product = products.find(p => p.slug === slug);
+
+if (!product) {
+  throw new Error(`Product not found: ${slug}`);
 }
 
-const { product } = Astro.props;
+const categoryClass = `category category-${product.category}`;
 ---
 
 <!DOCTYPE html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{product.name}</title>
-
-    <!-- ВАЖНО для GitHub Pages -->
-    <base href={import.meta.env.BASE_URL} />
   </head>
-
   <body>
-    <!-- ← BACK -->
-    <a class="back" href="./">← Powrót</a>
+    <div class="container">
+      <a class="back-link" href={`${BASE}`}>← Powrót</a>
 
-    <div class="card">
-      <div class="header">
-        <div class="image">
+      <div class="card">
+        <div class="product-header">
           <img
-            src={product.image}
+            src={`${BASE}${product.image}`}
             alt={product.name}
-            loading="lazy"
+            class="product-image"
           />
+
+          <div>
+            <span class={categoryClass}>
+              {product.category}
+            </span>
+
+            <h1 class="product-title">{product.name}</h1>
+            <div class="product-subtitle">{product.subtitle}</div>
+
+            <ul class="product-meta">
+              <li><strong>Kategoria:</strong> {product.category}</li>
+              <li><strong>Kraj:</strong> {product.country}</li>
+              <li><strong>ABV:</strong> {product.abv}</li>
+              {product.maturation && (
+                <li>
+                  <strong>Dojrzewanie:</strong> {product.maturation}
+                </li>
+              )}
+            </ul>
+          </div>
         </div>
 
-        <div class="info">
-          <h1>{product.name}</h1>
-          <p class="subtitle">{product.subtitle}</p>
+        {product.whenToOffer && product.whenToOffer.length > 0 && (
+          <section class="section">
+            <h2>Dla kogo</h2>
+            <ul>
+              {product.whenToOffer.map(item => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-          <ul class="meta">
-            <li><strong>Kategoria:</strong> {product.category}</li>
-            <li><strong>Kraj:</strong> {product.country}</li>
-            <li><strong>ABV:</strong> {product.abv}</li>
+        {product.howToPresent && (
+          <section class="section">
+            <h2>Jak prezentować</h2>
+            <p>{product.howToPresent}</p>
+          </section>
+        )}
 
-            {product.maturation && (
-              <li>
-                <strong>Dojrzewanie:</strong> {product.maturation}
-              </li>
-            )}
-          </ul>
-        </div>
+        {/* 🆕 COCKTAILS SECTION */}
+        {product.cocktails && product.cocktails.length > 0 && (
+          <section class="section">
+            <h2>W jakich drinkach można użyć</h2>
+            <ul>
+              {product.cocktails.map(drink => (
+                <li>{drink}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {product.alternatives && product.alternatives.length > 0 && (
+          <section class="section">
+            <h2>Służy alternatywą do</h2>
+            <ul>
+              {product.alternatives.map(alt => (
+                <li>{alt}</li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
 
-      {product.whenToOffer && (
-        <section>
-          <h2>Dla kogo</h2>
-          <ul>
-            {product.whenToOffer.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {product.howToPresent && (
-        <section>
-          <h2>Jak prezentować</h2>
-          <p>{product.howToPresent}</p>
-        </section>
-      )}
-
-      {product.alternatives && (
-        <section>
-          <h2>Słuzy alternatywą do</h2>
-          <ul>
-            {product.alternatives.map((alt) => (
-              <li>{alt}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {product.nose && (
-        <section>
-          <h2>W zapachu</h2>
-          <p>{product.nose}</p>
-        </section>
-      )}
+      <div class="spacer"></div>
     </div>
   </body>
 </html>
