@@ -10,12 +10,12 @@ body {
   color: #222;
 }
 
-/* ===== DEFAULT ACCENT ===== */
+/* ===== ACCENT (DEFAULT BROWN) ===== */
 :root {
   --accent: #7a4a2e;
 }
 
-/* ===== CATEGORY COLORS ===== */
+/* ===== CATEGORY COLORS (PRODUCT PAGE) ===== */
 body[data-category^="whisky"] {
   --accent: #b37a2b;
 }
@@ -44,7 +44,56 @@ body[data-category="likier"] {
   --accent: #6b2f7a;
 }
 
-/* ===== BACK ===== */
+/* ===== INDEX / SEARCH ===== */
+h1 {
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+#search {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* RESULTS LIST */
+#results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 520px;
+}
+
+#results li {
+  margin-bottom: 10px;
+}
+
+#results a {
+  display: block;
+  padding: 14px 16px;
+  background: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#results a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BACK LINK ===== */
 .back {
   display: inline-block;
   margin-bottom: 16px;
@@ -89,7 +138,7 @@ body[data-category="likier"] {
 }
 
 /* ===== INFO ===== */
-h1 {
+.info h1 {
   margin: 0;
   font-size: 28px;
   color: var(--accent);
