@@ -1,3 +1,5 @@
+
+
 /* ===== RESET ===== */
 *,
 *::before,
@@ -16,7 +18,7 @@ body {
 
 /* ===== LINKS ===== */
 a {
-  color: #6b4e2e;
+  color: #5b4636;
   text-decoration: none;
   font-weight: 500;
 }
@@ -25,43 +27,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== GLOBAL CONTAINER ===== */
+/* ===== CONTAINER ===== */
 body > * {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ===== BACK LINK ===== */
-a:first-of-type {
-  display: inline-block;
-  margin: 16px 16px 0;
-  font-size: 14px;
-  color: #7a7a7a;
-}
-
-/* ===== PRODUCT IMAGE ===== */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Ограничение бутылки */
-img[src*="bottle"],
-img[src*="img"],
-img[src*="png"],
-img[src*="webp"] {
-  max-height: 420px;
-  margin: 24px auto 8px;
-  object-fit: contain;
-}
-
 /* ===== CARD ===== */
-body {
-  padding-bottom: 32px;
-}
-
 body > div,
 body > main,
 body > section,
@@ -71,6 +44,22 @@ body > article {
   padding: 20px;
   margin: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== IMAGE ===== */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img[src*="bottle"],
+img[src*="img"],
+img[src*="png"],
+img[src*="webp"] {
+  max-height: 420px;
+  margin: 24px auto 12px;
+  object-fit: contain;
 }
 
 /* ===== TITLES ===== */
@@ -83,6 +72,8 @@ h2 {
   font-size: 22px;
   margin-top: 28px;
   margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
 }
 
 h3 {
@@ -94,20 +85,14 @@ h3 {
 h1 + p {
   color: #777;
   font-size: 15px;
-  margin-bottom: 12px;
 }
 
-/* ===== META (category / country / abv / maturation) ===== */
+/* ===== TEXT ===== */
 p,
 li {
   font-size: 15px;
 }
 
-strong {
-  color: #6b4e2e;
-}
-
-/* ===== LISTS ===== */
 ul {
   padding-left: 18px;
   margin: 8px 0 0;
@@ -117,21 +102,46 @@ li {
   margin-bottom: 6px;
 }
 
-/* ===== SECTIONS ===== */
-h2,
-h3 {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 4px;
+/* ===== META LABELS ===== */
+strong {
+  font-weight: 600;
 }
 
-/* ===== LONG TEXT (how to present) ===== */
-h2 + p,
-h3 + p {
-  color: #333;
-  max-width: 65ch;
+/* ===== CATEGORY COLORS ===== */
+/* whisky */
+.category-whisky,
+.category-whisky-single-malt {
+  color: #8b5a2b;
 }
 
-/* ===== SEARCH PAGE ===== */
+/* brandy / cognac */
+.category-brandy {
+  color: #7a3e2e;
+}
+
+/* vodka */
+.category-vodka {
+  color: #2f5f7c;
+}
+
+/* nalewka / liqueur */
+.category-nalewka,
+.category-likier {
+  color: #7b2f4f;
+}
+
+/* okowita / fruit distillate */
+.category-okowita {
+  color: #3f6b3f;
+}
+
+/* ===== VISUAL META BLOCK ===== */
+p strong {
+  display: inline-block;
+  min-width: 90px;
+}
+
+/* ===== SEARCH ===== */
 input[type="text"] {
   width: calc(100% - 32px);
   margin: 16px;
@@ -143,7 +153,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  border-color: #6b4e2e;
+  border-color: #8b5a2b;
 }
 
 /* ===== SEARCH RESULTS ===== */
@@ -159,11 +169,6 @@ input[type="text"]:focus {
   padding: 14px 16px;
   margin-bottom: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-}
-
-#results a {
-  display: block;
-  font-size: 16px;
 }
 
 /* ===== DESKTOP ===== */
