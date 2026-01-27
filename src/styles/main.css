@@ -1,20 +1,21 @@
-/* =====================
-   BASE
-===================== */
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ===== BASE ===== */
 body {
-  margin: 0;
-  padding: 16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f4f4f4;
-  color: #222;
+  background: #f5f4f2;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding: 16px;
 }
 
 a {
-  color: #6b3f00;
+  color: #6b4e2e;
   text-decoration: none;
 }
 
@@ -22,147 +23,117 @@ a:hover {
   text-decoration: underline;
 }
 
-/* =====================
-   HEADINGS
-===================== */
-h1 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: 20px;
-  margin: 0 0 8px 0;
-}
-
-/* =====================
-   SEARCH (index)
-===================== */
-#search {
-  width: 100%;
-  padding: 14px 16px;
-  font-size: 16px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  margin-bottom: 16px;
-}
-
-#results {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#results li {
-  background: #fff;
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-}
-
-/* =====================
-   PRODUCT CARD (slug)
-===================== */
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-/* BACK LINK */
+/* ===== BACK LINK ===== */
 .back {
   display: inline-block;
   margin-bottom: 12px;
   font-size: 14px;
+  color: #6b4e2e;
 }
 
-/* =====================
-   HEADER (image + title)
-===================== */
+/* ===== CARD ===== */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 820px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* ===== HEADER ===== */
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 20px;
+  align-items: center;
 }
 
+/* ===== IMAGE ===== */
 .product-image {
   width: 100%;
-  max-height: 320px;
+  max-width: 260px;
+  max-height: 420px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
-.product-title {
+/* ===== TITLE ===== */
+h1 {
   font-size: 26px;
-  margin: 0;
+  line-height: 1.2;
+  margin-bottom: 6px;
 }
 
-.product-subtitle {
+.subtitle {
   color: #777;
-  margin: 4px 0 12px;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
-/* =====================
-   META INFO
-===================== */
+/* ===== META ===== */
 .meta {
   list-style: none;
-  padding: 0;
-  margin: 0 0 16px 0;
+  margin-bottom: 20px;
 }
 
 .meta li {
+  font-size: 15px;
   margin-bottom: 4px;
 }
 
-/* =====================
-   SECTIONS
-===================== */
+.meta strong {
+  color: #6b4e2e;
+}
+
+/* ===== SECTIONS ===== */
 .section {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
-.section p {
-  max-width: 60ch;
-  line-height: 1.6;
-  color: #444;
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
+/* ===== LISTS ===== */
 .section ul {
   padding-left: 18px;
 }
 
 .section li {
   margin-bottom: 6px;
-  line-height: 1.5;
 }
 
-/* =====================
-   PRESENTATION HIGHLIGHT
-===================== */
-.presentation {
-  background: #f6f2eb;
-  padding: 16px;
-  border-radius: 12px;
+/* ===== TEXT BLOCK ===== */
+.section p {
+  font-size: 15px;
+  color: #333;
 }
 
-/* =====================
-   DESKTOP
-===================== */
+/* ===== DESKTOP ===== */
 @media (min-width: 768px) {
   body {
-    padding: 32px;
+    padding: 40px;
   }
 
   .header {
-    grid-template-columns: 300px 1fr;
-    align-items: center;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    align-items: flex-start;
   }
 
   .product-image {
+    max-width: 240px;
     max-height: 360px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 32px;
   }
 }
