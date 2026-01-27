@@ -118,13 +118,13 @@
   },
 
   {
-    "slug": "ratafia-kaszubska",
-    "name": "Ratafia-Kaszubska",
+    "slug": "nalewka-wisniowa-longinus",
+    "name": "Longinus Nalewka Wiśniowa",
     "subtitle": "Nalewka · Polska · Bez sztucznej słodyczy",
     "category": "nalewka",
     "country": "Poland",
-    "abv": "30%",
-    "image": "bottle_img/longinus-wisniowka.webp",
+    "abv": "18%",
+    "image": "bottle_img/nalewka-wisniowa-longinus.png",
 
     "whenToOffer": [
       "Klient szuka prawdziwej nalewki, nie likieru",
@@ -152,7 +152,7 @@
     "category": "okowita",
     "country": "Poland",
     "abv": "37.5%",
-    "image": "bottle_img/sliwowica-polska.webp",
+    "image": "bottle_img/jarzebiak-jaworzanski.png",
 
     "whenToOffer": [
       "Klient interesuje się mocnymi alkoholami",
@@ -209,6 +209,34 @@
     "country": "Poland",
     "abv": "32%",
     "image": "bottle_img/sublimat-winny.png",
+
+    "whenToOffer": [
+      "Klient pyta o regionalne, historyczne ciekawostki",
+      "Klient interesuje się niszowymi produktami",
+      "Klient chce coś innego niż miód pitny"
+    ],
+
+    "howToPresent": "Sublimat to rekonstrukcja historycznego trunku z czasów Mikołaja Kopernika – destylat winny o bogatym, korzennym charakterze.",
+
+    "alternatives": [
+      "Piernikowe likiery",
+      "Miody pitne",
+      "Miodowe likiery"
+    ],
+
+    "aroma": "Cynamon, goździki, miód, szafran, figi, pierniki.",
+    "taste": "Słodko-korzenny, rozgrzewający, piernikowy.",
+    "finish": "Średni, korzenny, piernikowy, miodowy."
+  },
+
+  {
+    "slug": "polski-ziemniak",
+    "name": "Polski Ziemniak",
+    "subtitle": "Wódka rzemieślnicza · Polska",
+    "category": "Wódka",
+    "country": "Poland",
+    "abv": "43,2%",
+    "image": "bottle_img/polski_zieminak.png",
 
     "whenToOffer": [
       "Klient pyta o regionalne, historyczne ciekawostki",
