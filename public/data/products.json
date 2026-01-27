@@ -96,7 +96,7 @@
     "category": "vodka",
     "country": "Poland",
     "abv": "35%",
-    "image": "bottle_img/Etiuda-Wisniowa.webp",
+    "image": "bottle_img/Etiuda-Wisniowa.png",
 
     "whenToOffer": [
       "Klient szuka wiśniowki do drinków",
@@ -108,8 +108,8 @@
 
     "alternatives": [
       "Dębowa wiśniowka",
-      "",
-      ""
+      "Soplica staropolska wiśniowa",
+      "Inne wiśniówki, nie nalewki"
     ],
 
     "aroma": "Wiśniowy, delikatnie zbożowy.",
@@ -137,7 +137,7 @@
     "alternatives": [
       "Najlepszy zamiennik Wiśniewskiego",
       "Pijana wiśnia",
-      "Inne wiśniówki"
+      "Ratafia kaszubska"
     ],
 
     "aroma": "Świeża wiśnia, lekki migdał.",
