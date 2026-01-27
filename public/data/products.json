@@ -97,6 +97,11 @@
     "country": "Poland",
     "abv": "35%",
     "image": "bottle_img/Etiuda-Wisniowa.png",
+    "cocktails": [
+  "wiśniówka spritz",
+  "wiśniówka sour",
+  "wiśniówka twist"
+],
 
     "whenToOffer": [
       "Klient szuka wiśniowki do drinków",
