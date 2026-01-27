@@ -157,4 +157,83 @@ a:hover {
   .card {
     padding: 32px;
   }
+/* ===== COLOR THEME ===== */
+:root {
+  --bg-main: #f4f1ee;
+  --bg-card: #ffffff;
+  --bg-section: #fbf7f2;
+
+  --text-main: #1f1f1f;
+  --text-muted: #6b6b6b;
+
+  --accent: #8b5a2b;       /* koniak / whisky */
+  --accent-soft: #e8d9c7;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #6f451f;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--bg-card);
+}
+
+/* ===== TITLES ===== */
+.info h1,
+.section h2 {
+  color: var(--accent);
+}
+
+/* ===== SUBTITLE ===== */
+.subtitle {
+  color: var(--text-muted);
+}
+
+/* ===== META ===== */
+.meta strong {
+  color: var(--accent);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  background: var(--bg-section);
+  border-left: 4px solid var(--accent-soft);
+}
+
+/* ===== SEARCH ===== */
+#search {
+  border: 1px solid var(--accent-soft);
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ===== SEARCH RESULTS ===== */
+#results li {
+  border-left: 4px solid var(--accent-soft);
+}
+
+#results li:hover {
+  border-left-color: var(--accent);
+  background: #fffaf4;
+}
+
+/* ===== BACK LINK ===== */
+.back {
+  color: var(--accent);
+}
 }
