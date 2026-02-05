@@ -73,6 +73,18 @@ const { product } = Astro.props;
         </section>
       )}
 
+{/* 🆕 CROSS-SELLING */}
+      {product.crossSell && (
+        <section>
+          <h2>Co warto dorzucić</h2>
+          <ul>
+            {product.crossSell.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* 🆕 COCKTAILS */}
       {product.cocktails && (
         <section>
@@ -102,6 +114,17 @@ const { product } = Astro.props;
           <p>{product.nose}</p>
         </section>
       )}
+
+            {product.salesTip && (
+  <section class="tip">
+    <h2>Tip sprzedażowy</h2>
+    <ul>
+      {product.salesTip.map((tip) => (
+        <li>{tip}</li>
+      ))}
+    </ul>
+  </section>
+)}
     </div>
   </body>
 </html>

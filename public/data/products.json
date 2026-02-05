@@ -19,11 +19,7 @@
 
     "howToPresent": "To edycja travel retail, tworzona w systemie solera – każda partia bazuje na poprzedniej.",
 
-    "alternatives": [
-      "Glenfiddich 12",
-      "Glenlivet 12",
-      "Balvenie 12"
-    ],
+    "salesTip": ["Często klienci szukają Glenfiddich 12, aby nie stracić sprzedaż mozemy zaproponować właśnie VAT 01."],
 
     "aroma": "Owocowo-kwiatowy, z nutami wanilii, kremowego toffi i delikatnego dębu.",
     "taste": "Gładki, słodowo-owocowy, z wanilią i lekką nutą przypraw.",
@@ -48,11 +44,7 @@
 
     "howToPresent": "James Hennessy to pozycja pomiędzy VSOP a XO – bardziej dojrzała niż VSOP, ale lżejsza i przystępniejsza niż klasyczne XO.Butelkę zaprojektował Marc Newson, co czyni ten koniak bardzo dobrym wyborem na prezent.",
 
-    "alternatives": [
-      "Henessy VSOP",
-      "Martell Nobliage",
-      "XO mniejszych domów Koniaków"
-    ],
+    "salesTip": ["Często mamy na sklepie taką sytuację że nie ma Malibu, aby nie stracić sprzedaż mozemy zaproponować Bacardi Carta Blanca + syrop kokosowy albo gotową Pina Coladę."],
 
     "aroma": "Suszone owoce, wanilia, delikatne przyprawy i nuty dębu.",
     "taste": "Bogaty, aksamitny, z nutami karmelu i przypraw.",
@@ -78,11 +70,7 @@
 
     "howToPresent": "Chopin Vintage to rzadkość – wódka ziemniaczana leżakowana w dębowych beczkach. Łączy czystość wódki z nutami znanymi z whisky.",
 
-    "alternatives": [
-      "Chopin Vintage Potato",
-      "Polskie whisky",
-      "Polskie alkohole starzone"
-    ],
+    "salesTip": ["Często klienci szukają polską whisky, jedną z opcji wląśnie może być Vintage."],
 
     "aroma": "Intensywny i mocny – suszone owoce, korzenie chrzanu.",
     "taste": "Miękka, lekko słodka, z waniliowym akcentem.",
@@ -103,6 +91,13 @@
   "wiśniówka twist"
 ],
 
+"crossSell": [
+  "Prosecco dla wiśniówka spritz",
+  "Whisky lub bourbon dla wiśniówka sour",
+  "Likier bitter i gin dla wiśniówka twist"
+]
+,
+
     "whenToOffer": [
       "Klient szuka wiśniowki do drinków",
       "Klient potrzebuję wysokoprocentowej, mniej słodkiej wiśniówki",
@@ -110,12 +105,6 @@
     ],
 
     "howToPresent": "Etiuda Wiśniowa z Gorzelni Chopin to doskonały wybór o każdej porze roku. Niespiesznie sączona w długie jesienne wieczory delikatnie rozgrzeje a podana w wersji letniej na lodzie lub lekko schłodzona oprócz niezrównanych doznań smakowych, przyniesie soczyste orzeźwienie.",
-
-    "alternatives": [
-      "Dębowa wiśniowka",
-      "Soplica staropolska wiśniowa",
-      "Inne wiśniówki, nie nalewki"
-    ],
 
     "aroma": "Wiśniowy, delikatnie zbożowy.",
     "taste": "słodka, z wyraźnym charakterem, ostra.",
@@ -139,11 +128,7 @@
 
     "howToPresent": "To klasyczna nalewka wiśniowa – bez cukrowego efektu likieru. Bardziej owocowa i naturalna.",
 
-    "alternatives": [
-      "Najlepszy zamiennik Wiśniewskiego",
-      "Pijana wiśnia",
-      "Ratafia kaszubska"
-    ],
+    "salesTip": ["Najlepszy wybór dla klienta szukajucego wiśniewskiego, którego nie mamy na sklepie."],
 
     "aroma": "Świeża wiśnia, lekki migdał.",
     "taste": "Owocowy, mniej slodki niż likieru.",
@@ -167,11 +152,7 @@
 
     "howToPresent": "Polska brandy z jarzębiny – owocowa, wytrawna, z charakterystyczną cierpkością. Idealna dla miłośników mocnych trunków.",
 
-    "alternatives": [
-      "Brandy",
-      "Jarzębiak",
-      "Wódki smakowe"
-    ],
+    "salesTip": ["Gdy klient szuka polskiej brandy – jarzębiak jaworzański jest naturalną alternatywą."],
 
     "aroma": "Nuty dębowe, owoce jarzebiny.",
     "taste": "słodki, wyczuwalna nuta cierpkości.",
@@ -195,11 +176,7 @@
 
     "howToPresent": "Trunek inspirowany toruńskim piernikiem – korzenny, ciepły, idealny na zimę.",
 
-    "alternatives": [
-      "Likier korzenny",
-      "Amaro",
-      "jack cinnamon, fireball"
-    ],
+    "salesTip": ["Często mamy na sklepie taką sytuację że nie ma Malibu, aby nie stracić sprzedaż mozemy zaproponować Bacardi Carta Blanca + syrop kokosowy albo gotową Pina Coladę."],
 
     "aroma": "Cynamon, goździki, imbir.",
     "taste": "Słodko-korzenny, rozgrzewający.",
@@ -223,11 +200,7 @@
 
     "howToPresent": "Sublimat to rekonstrukcja historycznego trunku z czasów Mikołaja Kopernika – destylat winny o bogatym, korzennym charakterze.",
 
-    "alternatives": [
-      "Piernikowe likiery",
-      "Miody pitne",
-      "Miodowe likiery"
-    ],
+    "salesTip": ["Klient który potrzebuje czegoś podobnego, ale innego niz miod pitny, czegoś unikalnego, uzupełnić koszyk pojemnością 0,35l."],
 
     "aroma": "Cynamon, goździki, miód, szafran, figi, pierniki.",
     "taste": "Słodko-korzenny, rozgrzewający, piernikowy.",
@@ -251,16 +224,41 @@
 
     "howToPresent": "To specjalna linia polskich wódek,  wytwarzanych w krótkoseryjnych, limitowanych partiach. Jest poddawana procesowi leżakowania.Posiada certyfikat koszerności.",
 
-    "alternatives": [
-      "Chopin potato",
-      "wódki koszerne",
-      "inne wódki ziemniaczane"
-    ],
+    "salesTip": [
+      "Klient szukający wódki ziemniaczanej, ale czegoś innego niż popularne marki, może być zainteresowany właśnie tą wódką. ",
+      "Klient szukający produktu koszernego " ],
 
     "aroma": "Intensywny, ziemniaczany, ziemisty.",
     "taste": "Oleisty, lekko słodki, łagodny",
     "finish": "Średni, oleisty, przyprawowy."
-  }
+  },
+
+  {
+  "slug": "malibu-coconut",
+  "name": "Malibu Coconut",
+  "subtitle": "Likier rumowy · Kokos",
+  "category": "likier",
+  "country": "Barbados",
+  "abv": "21%",
+  "image": "bottle_img/malibu.webp",
+
+  "whenToOffer": [
+    "Klient pyta o Malibu do Pina Colady",
+    "Klient szuka lekkiego, kokosowego alkoholu",
+    "Klient chce coś wakacyjnego lub do drinków"
+  ],
+
+  "howToPresent": "Malibu to likier na bazie rumu z dodatkiem kokosa. Niski alkohol, bardzo przystępny, idealny do prostych drinków i koktajli.",
+
+  "salesTip": ["Często mamy na sklepie taką sytuację że nie ma Malibu, aby nie stracić sprzedaż mozemy zaproponować Bacardi Carta Blanca + syrop kokosowy albo gotową Pina Coladę."],
+
+  "usedInCocktails": [
+    "Pina Colada",
+    "Malibu & Cola",
+    "Malibu & Pineapple"
+  ]
+}
+
 ]
 
 
