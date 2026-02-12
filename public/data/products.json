@@ -252,13 +252,299 @@
 
   "salesTip": ["Często mamy na sklepie taką sytuację że nie ma Malibu, aby nie stracić sprzedaż mozemy zaproponować Bacardi Carta Blanca + syrop kokosowy albo gotową Pina Coladę."],
 
-  "usedInCocktails": [
+  "cocktails": [
     "Pina Colada",
     "Malibu & Cola",
     "Malibu & Pineapple"
   ]
-}
+},
 
+  {
+    "slug": "ciroc",
+    "name": "Ciroc",
+    "subtitle": "Wódka winogronowa · Francja",
+    "category": "wodka",
+    "country": "France",
+    "abv": "40%",
+    "rawMaterial": "Winogrona",
+    "image": "bottle_img/ciroc.webp",
+    "whenToOffer": [
+      "Klient idealną wódkę do drinków",
+      "Klient lubi gładkie, delikatne alkohole",
+      "Klient chce coś innego niż zbożowa wódka"
+    ],
+
+    "howToPresent": "Cîroc pochodzi z wysokiej jakości francuskich winogron (Mauzac Blanc + Ugni Blanc), destylowana 5 razy z których ostatni w specjalnie zaprojektowanym miedzianym alembiku, co wyróżnia Ciroc spośród innych wódek i sprawia, że jest ona elegancko gładka i wyrafinowana.",
+
+    "crossSell": [
+  "Prosecco dla wiśniówka spritz",
+  "Whisky lub bourbon dla wiśniówka sour",
+  "Likier bitter i gin dla wiśniówka twist"
+],
+    "cocktails": [
+    "Blue Stone(40ml Ciroc, 20ml sok z cytryny, 10ml syrop vaniliowy, lemoniada)",
+    "Ciroc & Tonic (50ml Ciroc, 200ml toniku)",
+    "CÎROC City Break (35ml Ciroc, 20ml sok z limonki, 15ml syrop cukrowy, 50ml Wino musujące lub napój gazowany)"
+  ]
+  },
+
+  {
+    "slug": "belvedere",
+    "name": "Belvedere",
+    "subtitle": "Wódka żytnia · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "rawMaterial": "Żyto organiczne",
+    "image": "bottle_img/belvedere_organic.jpg",
+    "forWho": [
+      "Klient szuka znanej wódki premium",
+      "Klient lubi wódkę z charakterem"
+    ],
+
+    "howToPresent": "Malibu to likier na bazie rumu z dodatkiem kokosa. Niski alkohol, bardzo przystępny, idealny do prostych drinków i koktajli.",
+
+      "cocktails": [
+    "Espresso Martini Cocktail (45ml Belvedere, 1 espresso, 20ml syropu cukrowego, 20ml likieru kawowego, opcjonalnie 5 ml syropu)",
+    "The Belvedere Martini (60ml Belvedere, 7.5ml wytrawnego wermutu)",
+    "Cosmo (45ml Belvedere, 15ml Triple Sec, 25ml świeżego soku z limonki, 10ml soku żurawinowego)"
+    ]
+  },
+
+  {
+    "slug": "grey-goose",
+    "name": "Grey Goose",
+    "subtitle": "Wódka pszeniczna · Francja",
+    "category": "wodka",
+    "country": "France",
+    "abv": "40%",
+    "rawMaterial": "Pszenica",
+    "image": "bottle_img/grey_goose.png",
+    "forWho": [
+      "Klient szuka bardzo gładkiej wódki",
+      "Klient chce markę premium na prezent",
+      "Wódkę premium do drinków"
+    ],
+
+    "howToPresent": "Wódka GREY GOOSE destylowaną tylko raz, aby pozwolić jej naturalnemu charakterowi zabłysnąć. Efektem jest wódka o przyjemnym smaku i wyjątkowo gładkiej teksturze.",
+
+      "cocktails": [
+    "Screwdriver (60ml Ciroc, świezy sok z pomarańczy, lód)",
+    "Espresso Martini Cocktail (45ml Grey Goose,1 espresso, 20ml syropu cukrowego, 20ml likieru kawowego)"
+    ]
+  },
+
+  {
+    "slug": "danzka",
+    "name": "Danzka",
+    "subtitle": "Wódka pszeniczna · Dania",
+    "category": "wodka",
+    "country": "Denmark",
+    "abv": "40%",
+    "rawMaterial": "Zboża (w większości pszenica)",
+    "image": "bottle_img/danzka.jpg",
+    "forWho": [
+      "Klient szuka klasycznej, wodki w bezpiecznym opakowaniu",
+      "KLient szuka lekkiego opakowania, które łatwo zabrać w podróż",
+      "Klient szuka wódki do drinków w rozsądnej cenie"
+    ],
+
+        "howToPresent": "Butelka DANZKA Forty jest również znana jako najlepsza na świecie premium wódka do podróży. Jedyna wódka, która się nie stłucze podczas podróży. Dodatkowo unikalny materiał sprawia, że schładza się znacznie szybciej.",
+
+      "cocktails": [
+    "Summer Breeze (50ml DANZKA Cranraz5 cl pineapple juice10 cl cranberry juice)",
+    "White Russian (30ml DANZKA, 20ml likieru kawowego, 50ml mleka)",
+    "Classic Cosmopolitan (40ml DANZKA, 20ml Triple Sec, 10ml świeżego soku z limonki, 20ml soku żurawinowego)"
+    ]
+  },
+
+  {
+    "slug": "smirnoff",
+    "name": "Smirnoff",
+    "subtitle": "Wódka klasyczna · Międzynarodowa",
+    "category": "wodka",
+    "country": "UK",
+    "abv": "37.5%",
+    "image": "/images/smirnoff.png",
+    "forWho": [
+      "Klient szuka znanej, uniwersalnej wódki",
+      "Klient potrzebuje alkoholu do drinków"
+    ],
+
+    "howToPresent": "Nasza wódka, potrójnie destylowana i filtrowana 10 razy."
+
+  },
+
+  {
+    "slug": "titos",
+    "name": "Tito’s Handmade Vodka",
+    "subtitle": "Wódka kukurydziana · USA",
+    "category": "wodka",
+    "country": "USA",
+    "abv": "40%",
+    "image": "/images/titos.png",
+    "forWho": [
+      "Klient szuka wódki rzemieślniczej",
+      "Klient unika glutenu"
+    ],
+    "salesTip": [
+      "Podkreśl kukurydzianą bazę i rzemieślniczy charakter."
+    ]
+  },
+
+  {
+    "slug": "zubrowka",
+    "name": "Żubrówka",
+    "subtitle": "Wódka z trawą żubrową · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "37.5%",
+    "image": "/images/zubrowka.png",
+    "forWho": [
+      "Klient szuka klasycznej polskiej wódki",
+      "Klient lubi delikatnie aromatyczne alkohole"
+    ]
+  },
+
+  {
+    "slug": "absolut",
+    "name": "Absolut",
+    "subtitle": "Wódka pszeniczna · Szwecja",
+    "category": "wodka",
+    "country": "Sweden",
+    "abv": "40%",
+    "image": "/images/absolut.png",
+    "forWho": [
+      "Klient szuka wódki do drinków",
+      "Klient chce rozpoznawalną markę"
+    ]
+  },
+
+  {
+    "slug": "chopin-rye",
+    "name": "Chopin Rye",
+    "subtitle": "Wódka żytnia · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-rye.png",
+    "forWho": [
+      "Klient lubi wytrawne, pieprzne profile",
+      "Klient zna markę Chopin"
+    ]
+  },
+
+  {
+    "slug": "chopin-wheat",
+    "name": "Chopin Wheat",
+    "subtitle": "Wódka pszeniczna · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-wheat.png",
+    "forWho": [
+      "Klient szuka bardzo łagodnej wódki",
+      "Klient pije wódkę solo"
+    ]
+  },
+
+  {
+    "slug": "chopin-potato",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  },
+
+  {
+    "slug": "chopin-vintage",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  },
+
+  {
+    "slug": "chopin-potato",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  },
+
+  {
+    "slug": "chopin-potato",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  },
+
+  {
+    "slug": "chopin-potato",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  },
+
+  {
+    "slug": "chopin-potato",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  },
+
+  {
+    "slug": "chopin-potato",
+    "name": "Chopin Potato",
+    "subtitle": "Wódka ziemniaczana · Polska",
+    "category": "wodka",
+    "country": "Poland",
+    "abv": "40%",
+    "image": "/images/chopin-potato.png",
+    "forWho": [
+      "Klient szuka pełniejszego body",
+      "Klient interesuje się ziemniaczaną wódką"
+    ]
+  }
 ]
 
 
