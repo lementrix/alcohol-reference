@@ -277,14 +277,13 @@
     "howToPresent": "Cîroc pochodzi z wysokiej jakości francuskich winogron (Mauzac Blanc + Ugni Blanc), destylowana 5 razy z których ostatni w specjalnie zaprojektowanym miedzianym alembiku, co wyróżnia Ciroc spośród innych wódek i sprawia, że jest ona elegancko gładka i wyrafinowana.",
 
     "crossSell": [
-  "Prosecco dla wiśniówka spritz",
-  "Whisky lub bourbon dla wiśniówka sour",
-  "Likier bitter i gin dla wiśniówka twist"
+  "Wina mususujące i szampany",
+  "Rozne likiery di innych koktajli"
 ],
     "cocktails": [
-    "Blue Stone(40ml Ciroc, 20ml sok z cytryny, 10ml syrop vaniliowy, lemoniada)",
-    "Ciroc & Tonic (50ml Ciroc, 200ml toniku)",
-    "CÎROC City Break (35ml Ciroc, 20ml sok z limonki, 15ml syrop cukrowy, 50ml Wino musujące lub napój gazowany)"
+    "Idealna do mieszania z sokami przez swoją winogronową bazę",
+    "Dobrze komponuje się z musującymi winami i szampanem a nawet z prostym tonikiem jak sugeruje producent",
+    "Jedna z najlepszych opcji do klasycznego Cosmopolitana"
   ]
   },
 
@@ -302,13 +301,7 @@
       "Klient lubi wódkę z charakterem"
     ],
 
-    "howToPresent": "Malibu to likier na bazie rumu z dodatkiem kokosa. Niski alkohol, bardzo przystępny, idealny do prostych drinków i koktajli.",
-
-      "cocktails": [
-    "Espresso Martini Cocktail (45ml Belvedere, 1 espresso, 20ml syropu cukrowego, 20ml likieru kawowego, opcjonalnie 5 ml syropu)",
-    "The Belvedere Martini (60ml Belvedere, 7.5ml wytrawnego wermutu)",
-    "Cosmo (45ml Belvedere, 15ml Triple Sec, 25ml świeżego soku z limonki, 10ml soku żurawinowego)"
-    ]
+    "howToPresent": "Malibu to likier na bazie rumu z dodatkiem kokosa. Niski alkohol, bardzo przystępny, idealny do prostych drinków i koktajli."
   },
 
   {
@@ -329,8 +322,7 @@
     "howToPresent": "Wódka GREY GOOSE destylowaną tylko raz, aby pozwolić jej naturalnemu charakterowi zabłysnąć. Efektem jest wódka o przyjemnym smaku i wyjątkowo gładkiej teksturze.",
 
       "cocktails": [
-    "Screwdriver (60ml Ciroc, świezy sok z pomarańczy, lód)",
-    "Espresso Martini Cocktail (45ml Grey Goose,1 espresso, 20ml syropu cukrowego, 20ml likieru kawowego)"
+    "Cytrusowe, orzeźwiające koktajle, które podkreślają naturalne nuty GREY GOOSE"
     ]
   },
 
@@ -349,13 +341,8 @@
       "Klient szuka wódki do drinków w rozsądnej cenie"
     ],
 
-        "howToPresent": "Butelka DANZKA Forty jest również znana jako najlepsza na świecie premium wódka do podróży. Jedyna wódka, która się nie stłucze podczas podróży. Dodatkowo unikalny materiał sprawia, że schładza się znacznie szybciej.",
+        "howToPresent": "Butelka DANZKA Forty jest również znana jako najlepsza na świecie premium wódka do podróży. Jedyna wódka, która się nie stłucze podczas podróży. Dodatkowo unikalny materiał sprawia, że schładza się znacznie szybciej."
 
-      "cocktails": [
-    "Summer Breeze (50ml DANZKA Cranraz5 cl pineapple juice10 cl cranberry juice)",
-    "White Russian (30ml DANZKA, 20ml likieru kawowego, 50ml mleka)",
-    "Classic Cosmopolitan (40ml DANZKA, 20ml Triple Sec, 10ml świeżego soku z limonki, 20ml soku żurawinowego)"
-    ]
   },
 
   {
@@ -365,14 +352,13 @@
     "category": "wodka",
     "country": "UK",
     "abv": "37.5%",
-    "image": "/images/smirnoff.png",
+    "image": "bottle_img/smirnoff.webp",
     "forWho": [
       "Klient szuka znanej, uniwersalnej wódki",
       "Klient potrzebuje alkoholu do drinków"
     ],
 
-    "howToPresent": "Nasza wódka, potrójnie destylowana i filtrowana 10 razy."
-
+    "howToPresent": "Potrójnie destylowana i filtrowana 10 razy, co daje tej wódce bardzo neutralny smak."
   },
 
   {
@@ -382,13 +368,19 @@
     "category": "wodka",
     "country": "USA",
     "abv": "40%",
-    "image": "/images/titos.png",
+    "rawMaterial": "Kukurydza",
+    "image": "bottle_img/titos.jpg",
     "forWho": [
       "Klient szuka wódki rzemieślniczej",
       "Klient unika glutenu"
     ],
-    "salesTip": [
-      "Podkreśl kukurydzianą bazę i rzemieślniczy charakter."
+
+    "howToPresent": "Wytwarzany w tradycyjnych alembikach i inspirowany metodami destylacji szkockich single maltów oraz francuskich koniaków. Jest tak samo gładka i delikatna jak pszeniczne wódki, ale przyjemniejsza w smaku",
+
+        "cocktails": [
+    "",
+    "",
+    ""
     ]
   },
 
@@ -399,10 +391,23 @@
     "category": "wodka",
     "country": "Poland",
     "abv": "37.5%",
-    "image": "/images/zubrowka.png",
+    "rawMaterial": "Zboża i ekstrakt z trawy żubrowej",
+    "image": "bottle_img/zubrowka.png",
     "forWho": [
       "Klient szuka klasycznej polskiej wódki",
-      "Klient lubi delikatnie aromatyczne alkohole"
+      "Klient lubi delikatnie aromatyczne alkohole",
+      ""
+    ],
+
+    "howToPresent": "Polska wódka aromatyzowana naturalną trawą żubrową. Zachowuje wytrawny charakter wódki, ale dzięki delikatnemu aromatowi waniliowo-ziołowemu pije się wyraźnie łagodniej niż klasyczne wódki.",
+
+        "cocktails": [
+    "Szarlotka (40ml Żubrówka, sok jabłkowy, cynamon w proszku)",
+    "Żubrówka  sour (50ml Żubrówka, 30ml sok z cytryny, 20ml syrop cukrowy)"
+    ],
+
+    "salesTip": [
+      "Żubrówka jest bardzo skuteczna jako alternatywa dla najtańszych wódek neutralnych. Klient, który wybiera tanią białą wódkę, zwykle nie szuka konkretnej marki szuka ceny i łagodności."
     ]
   },
 
@@ -411,8 +416,9 @@
     "name": "Absolut",
     "subtitle": "Wódka pszeniczna · Szwecja",
     "category": "wodka",
-    "country": "Sweden",
+    "country": "Szwecja",
     "abv": "40%",
+    "rawMaterial": "Pszenica",
     "image": "/images/absolut.png",
     "forWho": [
       "Klient szuka wódki do drinków",
