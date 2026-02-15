@@ -433,11 +433,15 @@
     "category": "wodka",
     "country": "Poland",
     "abv": "40%",
-    "image": "/images/chopin-rye.png",
+    "rawMaterial":"Żyto"
+    "image": "bottle_img/chopin-rye.png",
     "forWho": [
-      "Klient lubi wytrawne, pieprzne profile",
-      "Klient zna markę Chopin"
+      "Dla osób ceniących intensywny smak i charakter trunku",
+      "Idelny dla miłośników wyrazistych koktajli"
     ]
+
+    "howToPresent":"Wódka o intensywnym smaku, pikantnymi nutami pieprzu charakterystycznymi dla żyta"
+
   },
 
   {
@@ -447,11 +451,14 @@
     "category": "wodka",
     "country": "Poland",
     "abv": "40%",
+    "rawMaterial":"Pszenica"
     "image": "/images/chopin-wheat.png",
     "forWho": [
-      "Klient szuka bardzo łagodnej wódki",
-      "Klient pije wódkę solo"
+      "Klient szuka łagodnej i delikatnej wódki",
+      "Osób lubiących wódki pszeniczne",
+      "Dla miłośników subtelnych koktajli"
     ]
+    "howToPresent":"Lekka, neutralna, delikatna, gładka, uniwersalna. 
   },
 
   {
@@ -461,11 +468,15 @@
     "category": "wodka",
     "country": "Poland",
     "abv": "40%",
-    "image": "/images/chopin-potato.png",
+    "rawMaterial":"Ziemniaki"
+    "image": "bottle_img/chopin-potato.png",
     "forWho": [
-      "Klient szuka pełniejszego body",
-      "Klient interesuje się ziemniaczaną wódką"
+      "Klient szukający unikalnej wódki polskiej",
+      "Osób ceniących pełniejsze i wyraziste trunki",
+      "Szukających prezentu z Polski"
     ]
+
+      "howToPresent":"Ikoniczna wódka ziemniaczana, ma bogatszy profil smakowy, kremowa, pełna, oleista, z subtelną słodyczą. Idealny prezent z Polski, ponieważ wódek z tego surowca praktycznie nie robią w innych krajach."
   },
 
   {
